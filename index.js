@@ -8,14 +8,12 @@ function moveDodgerLeft() {
       dodger.style.left = `${left - 1}px`;
     }
   }
-  function moveDodgerRight() {
-    const rightNumbers = dodger.style.right.replace("px", "");
-    const right = parseInt(rightNumbers, 10);
-  
-    if (right > 0) {
-      dodger.style.right = `${right - 1}px`;
-    }
-  }
-   
+ function moveDodgerRight() {
+function moveDodgerRight() {
+   const dodger = document.getElementById('dodger');
+   const currentLeft = parseInt(dodger.style.left.replace('px', ''));
+   const newLeft = Math.min(currentLeft + 10, window.innerWidth - 40);
+   dodger.style.left = `${newLeft}px`;
+ }
 
 
